@@ -1,0 +1,11 @@
+<p ><% @error %></p>
+
+<%= form_tag  action: :auth do %>
+        <%= label_tag :student_no, "学生番号" %><br>
+        <%= text_field_tag :student_no %> <br>
+        <%= label_tag :password , "パスワード" %><br>
+        <%= password_field_tag :password %>
+    <%= hidden_field_tag :referer, flash[:referer] %>
+        <%= submit_tag 'ログイン' %>
+<% end %>
+  

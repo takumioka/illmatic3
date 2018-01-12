@@ -1,0 +1,30 @@
+<%= form_for @student,:url => {:action => :create} do |f| %>
+    <div class="field">
+        <%= f.label :student_no, "学生番号" %><br>
+        <%= f.text_field :student_no %> <br>
+    </div>
+    <div class="field">
+        <%= f.label :password , "パスワード" %><br>
+        <%= f.password_field :password %>
+    </div>
+    <div class="field">
+        <%= f.label :password_confirmation , "パスワード" %><br>
+        <%= f.password_field :password_confirmation %>
+    </div>
+
+    <div class="field">
+        <%= f.label :student_no, "クラス" %><br>
+        <%= f.text_field :k_class %> <br>
+　   </div>
+    <div class="field">
+        <%= f.label :number, "番号" %><br>
+        <%= f.text_field :number %> <br>
+　   </div>
+    <div class="field">
+        <%= f.label :number, "名前" %><br>
+        <%= f.text_field :name %> <br>
+　   </div>
+    <div class="actions" >
+        <%= f.submit %>
+    </div>
+<% end %>

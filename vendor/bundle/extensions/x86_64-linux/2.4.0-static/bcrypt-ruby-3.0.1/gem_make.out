@@ -1,0 +1,39 @@
+current directory: /root/illmatic/vendor/bundle/gems/bcrypt-ruby-3.0.1/ext/mri
+/root/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20171215-31619-297bwi.rb extconf.rb
+creating Makefile
+
+current directory: /root/illmatic/vendor/bundle/gems/bcrypt-ruby-3.0.1/ext/mri
+make "DESTDIR=" clean
+
+current directory: /root/illmatic/vendor/bundle/gems/bcrypt-ruby-3.0.1/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+bcrypt_ext.c: 関数 ‘bcrypt_wrapper’ 内:
+bcrypt_ext.c:27:5: 警告: 関数 ‘ruby_bcrypt’ の暗黙的な宣言です [-Wimplicit-function-declaration]
+     return (VALUE)ruby_bcrypt(args->output, args->key, args->salt);
+     ^
+bcrypt_ext.c: トップレベル:
+bcrypt_ext.c:25:14: 警告: ‘bcrypt_wrapper’ が定義されましたが使用されません [-Wunused-function]
+ static VALUE bcrypt_wrapper(void *_args) {
+              ^
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-self-assign" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-constant-logical-operand" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-parentheses-equality" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-tautological-compare" です [デフォルトで有効]
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+In file included from wrapper.c:27:0:
+/root/.rbenv/versions/2.4.1/include/ruby-2.4.0/ruby/backward/util.h:2:2: 警告: #warning use "ruby/util.h" instead of bare "util.h" [-Wcpp]
+ #warning use "ruby/util.h" instead of bare "util.h"
+  ^
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-self-assign" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-constant-logical-operand" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-parentheses-equality" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-tautological-compare" です [デフォルトで有効]
+linking shared-object bcrypt_ext.so
+
+current directory: /root/illmatic/vendor/bundle/gems/bcrypt-ruby-3.0.1/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20171215-31619-sn9zf9
