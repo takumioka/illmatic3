@@ -1,7 +1,7 @@
 class TopController < ApplicationController
     def index 
     end 
-    before_action :check_logined,only: :view
+    before_action :check_logined
     private 
         def check_logined 
             if session[:usr] then
