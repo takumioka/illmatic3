@@ -1,5 +1,6 @@
 class LoginController < ApplicationController
     def index 
+        cookies[:testid]={value:"1クッキー",expires:3.months.from_now,http_only:true}
     end
     def auth 
         usr=Student.find_by(student_no: params[:student_no])

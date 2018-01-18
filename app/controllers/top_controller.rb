@@ -3,6 +3,9 @@ class TopController < ApplicationController
         @name=params[:student_no]
         
     end 
+    def test 
+        @id = cookies[:testid]
+    end
     before_action :check_logined
     private 
         def check_logined 
