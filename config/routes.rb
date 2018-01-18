@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     post 'student/password_comp'
     
     post 'student/login_check'
+
+    get 'top/test'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get 'top/index'
   get 'login_test/index'
@@ -27,6 +29,9 @@ Rails.application.routes.draw do
 
   get 'login/auth'
   post 'login/auth'
+  
+  get 'login/id'
+  post 'login/id'
   
 
 end

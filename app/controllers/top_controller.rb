@@ -1,7 +1,7 @@
 class TopController < ApplicationController
     def index 
         @name=params[:student_no]
-        @gggg="rerrrr"
+        
     end 
     before_action :check_logined
     private 
