@@ -1,0 +1,26 @@
+<h1>一覧</h1>
+<p><%= @msg %></p>
+<pre>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>student_no</th>
+        <th>k_class</th>
+        <th>number</th>
+        <th>name</th>
+        <th>password</th>
+        <th></th>
+    </tr>
+    <% @data.each do |s| %>
+        <tr>
+            <td><%= s.id %></td>
+            <td><%= s.student_no %></td>
+            <td><%= s.k_class %></td>
+            <td><%= s.number %></td>
+            <td><%= s.name %></td>
+            <td><%= s.password_digest %></td>
+            <td><a href="/student/edit/<%= s.id %>">編集</a></td>
+        </tr>
+    <% end %>
+</table>
+</pre>
