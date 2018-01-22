@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     post 'student/login_check'
 
     get 'top/test'
+    get 'mypage/mypage'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get 'top/index'
   get 'login_test/index'
