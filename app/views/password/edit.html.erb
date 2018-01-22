@@ -1,0 +1,26 @@
+<center>
+    <h1>KCS北九州情報専門学校</h1>
+    <div class="label label-default">
+        <h2>パスワード変更</h2>
+    </div>
+    <p>あなたのパスワードをお好きなパスワードに変更できます。<br>
+    セキュリティを高くするために月に1度はパスワードの変更をおすすめします。</p>
+    <table>
+    <%= form_tag({ controller: :password, action: :comp}, id: :password) do %>
+        <tr>
+            <th>新しいパスワード</th>
+            <td><%= password_field_tag :pass, '', size: 30 %></td>
+        </tr>
+        <tr>
+            <th>新しいパスワード（確認）</th>
+            <td><%= password_field_tag :pass, '', size: 30 %></td>
+        </tr>
+        <tr>
+            <td colspan="2"><hr></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><%= submit_tag '変更' %><input type="reset" value="リセット"></td>
+        </tr>
+    <% end %>
+</center>

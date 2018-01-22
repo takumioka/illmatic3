@@ -1,6 +1,12 @@
 class TopController < ApplicationController
-    def index 
+    def index
+        data = Student.find(session[:usr])
+        session[:student_no]=data.name
+        @id = session[:student_no]        
     end 
+    def test 
+        @id = session[:student_no]
+    end
     before_action :check_logined
     private 
         def check_logined 
@@ -17,4 +23,6 @@ class TopController < ApplicationController
                 redirect_to controller: :login,  action: :index
             end 
         end
+    
+
 end
