@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'grade/inquiry'
 
+    get 'top/test'
+    get 'mypage/mypage'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # ログイン
   get 'top/index'
@@ -19,6 +21,9 @@ Rails.application.routes.draw do
 
   get 'login/auth'
   post 'login/auth'
+
+  get 'login/logout'
+  post 'login/logout'
 
   get 'login/id'
   post 'login/id'
