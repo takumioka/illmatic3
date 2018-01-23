@@ -10,14 +10,23 @@ Rails.application.routes.draw do
   get 'top/index'
 
   get 'login_test/index'
-  post 'login_test/index' # アカウント作成
+  post 'login_test/index' # アカウント作成(学生)
+
+  get 'login_test/teachers_new'
+  post 'login_test/teachers_new' # アカウント作成(教師)
+
 
   get 'login_test/create'
   post 'login_test/create'
 
+  get 'login_test/create_teachers'
+  post 'login_test/create_teachers'
+
   post 'login_test/auth'
   
   get 'login/index'
+  get 'login/teacher'
+  
 
   get 'login/auth'
   post 'login/auth'
