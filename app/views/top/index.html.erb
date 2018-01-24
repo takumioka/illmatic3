@@ -1,5 +1,5 @@
 <p><%= link_to '一覧', student_list_path %></p>
-<%= provide(:title, @id) %>   
+<%= provide(:title,session[:name]) %>   
 <div id="page-content-wrapper">
     <div class="container">
         <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=kcskr4%40gmail.com&amp;color=%231B887A&amp;ctz=Asia%2FTokyo" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>

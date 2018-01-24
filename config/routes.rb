@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # ログイン
   get 'top/index'
+  get 'top/adminindex'
 
   get 'login_test/index'
   post 'login_test/index' # アカウント作成(学生)
