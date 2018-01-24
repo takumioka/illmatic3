@@ -8,3 +8,4 @@
 Subject.create(subject_name:"アルゴリズム")
 Subject.create(subject_name:"セキュリティ")
 Subject.create(subject_name:"データベース")
+Grade.create(students_id:1,subjects_id:1,grade:"可")

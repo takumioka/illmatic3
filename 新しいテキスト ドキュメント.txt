@@ -17,3 +17,5 @@ rails generate model subjects subjects_id:INTEGER subject_name:string
 
 
 rails g migration add_name_index_to_articles
+
+rails g model grade teachers_id:integer subjects_id integer grade:string
