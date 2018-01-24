@@ -10,21 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180124063830) do
+ActiveRecord::Schema.define(version: 20180124134052) do
 
   create_table "students", force: :cascade do |t|
+    t.integer "student_no"
     t.string "password_digest"
     t.string "k_class"
     t.integer "number"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "student_no"
     t.index ["student_no"], name: "index_students_on_student_no", unique: true
   end
 
   create_table "subjects", force: :cascade do |t|
-    t.integer "subjects_id"
     t.string "subject_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

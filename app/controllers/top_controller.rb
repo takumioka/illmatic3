@@ -4,7 +4,7 @@ class TopController < ApplicationController
         session[:name]=data.name
     end
     def adminindex
-        data = Teacher.find(session[:usr])
+        data = Teacher.find(session[:admin] )
         session[:name]=data.name
     end 
     def test 

@@ -16,7 +16,7 @@ class LoginController < ApplicationController
 
         else
             if admin && admin.authenticate(params[:password]) then 
-                session[:usr] = admin.id 
+                session[:admin] = admin.id 
                 redirect_to controller: :top,  action: :adminindex  
             else    
                 @error="ユーザー名/パスワードが違う"           
