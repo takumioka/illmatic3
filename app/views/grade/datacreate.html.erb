@@ -1,0 +1,17 @@
+<%= form_for @tests,:url => {:action => :create} do |f| %>
+    <div class="field">
+        <%= f.label :students_id, "学生番号" %><br>
+        <%= f.text_field :students_id %> <br>
+    </div>
+    <div class="field">
+        <%= f.label :subjects_id, "教科id" %><br>
+        <%= f.text_field :subjects_id %> <br>
+　   </div>
+    <div class="field">
+        <%= f.label :grade, "評価" %><br>
+        <%= f.text_field :grade %> <br>
+　   </div>
+    <div class="actions" >
+        <%= f.submit %>
+    </div>
+<% end %>

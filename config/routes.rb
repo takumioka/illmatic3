@@ -66,5 +66,13 @@ Rails.application.routes.draw do
   get 'password/edit'
 
   get 'password/comp'
+
+
+  get'grade/datacreate'
+  post'grade/datacreate'
+  get 'grade/create'
+  post 'grade/create'
+  
+  
   
 end
