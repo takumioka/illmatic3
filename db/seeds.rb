@@ -5,6 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Grade.create(grade:"可")
+Grade.create(student_id:1 ,subjects_id:2,grade:"優")
 
 

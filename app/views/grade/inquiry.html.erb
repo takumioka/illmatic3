@@ -27,11 +27,9 @@
 
 
 <tbody>
-  <% @test.each do |ts| %>
     <tr>
-      <td><%= ts.students_id %> </td>
+      <% @test.each do |te| %>
+        <td><%= te.subject.subject_name%> </td>
+        <% end %>
     </tr>
-    <% end %>  
-    </tbody>
-    
-
+  </tbody>

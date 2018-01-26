@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   get 'grade/inquiry'
 
-    get 'top/test'
-    get 'mypage/mypage'
+  get 'top/test'
+  get 'mypage/mypage'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # ログイン
   get 'top/index'
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   get 'login_test/create'
   post 'login_test/create'
-
+  
   get 'login_test/create_teachers'
   post 'login_test/create_teachers'
 

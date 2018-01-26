@@ -1,6 +1,7 @@
 class GradeController < ApplicationController
   def inquiry
-    @test=Grade.find_by(students_id:1)
+    @test = Grade.where(subjects_id:1)
+        
   end
   def datacreate
     @tests=Grade.new
