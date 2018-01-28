@@ -15,11 +15,11 @@ class LoginTestController < ApplicationController
 
     private 
     def person_params
-        params.require(:student).permit(:student_no,:password, :password_confirmation,:k_class,:number,:name)
+        params.require(:student).permit(:id,:password, :password_confirmation,:k_class,:number,:name)
     end 
     private 
     def teachers_params
-        params.require(:teacher).permit(:teacher_no,:password, :password_confirmation,:k_class,:name)
+        params.require(:teacher).permit(:id,:password, :password_confirmation,:k_class,:name)
     end 
 
 end

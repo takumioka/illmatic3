@@ -1,13 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  teacher_no: 
   password_digest: MyString
   k_class: MyString
   name: MyString
 
 two:
-  teacher_no: 
   password_digest: MyString
   k_class: MyString
   name: MyString

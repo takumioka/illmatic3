@@ -11,7 +11,7 @@
 
 rails g scaffold student student_no:integer password_digest:string k_class:string number:integer name:string
 
-rails generate model teachers teacher_no:INTEGER password_digest:string k_class:string  name:string
+rails generate model teachers  password_digest:string k_class:string  name:string
 
 rails generate model subjects subjects_id:INTEGER subject_name:string 
 

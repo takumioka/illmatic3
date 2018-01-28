@@ -1,3 +1,4 @@
+<%= provide(:title,session[:name]) %>   
 <h1>KCS北九州情報専門学校</h1>
 <div class="labelstudent label-default">
   <h2>成績紹介</h2>
@@ -10,26 +11,11 @@
     </tr>
   </thead>
   <tbody>
+    <% @keka.each do |te| %>
     <tr>
-      <td>セキュリティ</td>
-      <td>優</td>
+        <td><%= te.subject_name %> </td>
+        <td><%= te.grade %> </td>
     </tr>
-    <tr>
-      <td>データベース</td>
-      <td>良</td>
-    </tr>
-    <tr>
-      <td>アルゴリズム</td>
-      <td>可</td>
-    </tr>
+    <% end %>
   </tbody>
 </table>
-
-
-<tbody>
-    <tr>
-      <% @test.each do |te| %>
-        <td><%= te.subject.subject_name%> </td>
-        <% end %>
-    </tr>
-  </tbody>

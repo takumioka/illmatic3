@@ -1,3 +1,3 @@
 class Subject < ApplicationRecord
-    has_many :grade, dependent: :destroy        
+    has_many :grade 
 end

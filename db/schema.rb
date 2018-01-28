@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180126005622) do
+ActiveRecord::Schema.define(version: 20180128171621) do
 
   create_table "grades", force: :cascade do |t|
-    t.integer "student_id"
-    t.integer "subjects_id"
     t.string "grade"
+    t.integer "student_id"
+    t.integer "subject_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["student_id"], name: "index_grades_on_student_id"
-    t.index ["subjects_id"], name: "index_grades_on_subjects_id"
+    t.index ["subject_id"], name: "index_grades_on_subject_id"
   end
 
   create_table "students", force: :cascade do |t|
@@ -29,8 +29,6 @@ ActiveRecord::Schema.define(version: 20180126005622) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "student_no"
-    t.index ["student_no"], name: "index_students_on_student_no", unique: true
   end
 
   create_table "subjects", force: :cascade do |t|
@@ -40,13 +38,11 @@ ActiveRecord::Schema.define(version: 20180126005622) do
   end
 
   create_table "teachers", force: :cascade do |t|
-    t.integer "teacher_no"
     t.string "password_digest"
     t.string "k_class"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["teacher_no"], name: "index_teachers_on_teacher_no", unique: true
   end
 
 end

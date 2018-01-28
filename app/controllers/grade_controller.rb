@@ -1,6 +1,7 @@
 class GradeController < ApplicationController
   def inquiry
-    @test = Grade.where(subjects_id:1)
+    nukidasi=Grade.where(student_id:session[:usr])
+    @keka = nukidasi.joins(:student,:subject).select("subjects.subject_name,grades.grade")
         
   end
   def datacreate

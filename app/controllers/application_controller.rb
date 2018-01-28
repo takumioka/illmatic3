@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
               end 
             elsif session[:admin] then
                 begin 
-                    @usr = Student.find(session[:admin])
+                    @usr = Teacher.find(session[:admin])
                 rescue ActiveRecord::Record::RecordnotFound
                     reset_seession
                 end 
@@ -19,7 +19,6 @@ class ApplicationController < ActionController::Base
   
 
           unless @usr 
-              flash[:refere] = request.fullpath 
               redirect_to controller: :login,  action: :index
           end 
       end

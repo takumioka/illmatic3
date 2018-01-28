@@ -1,7 +1,7 @@
 <%= form_for @student,:url => {:action => :create} do |f| %>
     <div class="field">
-        <%= f.label :student_no, "学生番号" %><br>
-        <%= f.text_field :student_no %> <br>
+        <%= f.label :id, "学生番号" %><br>
+        <%= f.text_field :id %> <br>
     </div>
     <div class="field">
         <%= f.label :password , "パスワード" %><br>

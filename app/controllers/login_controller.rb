@@ -7,12 +7,12 @@ class LoginController < ApplicationController
         render :layout => nil        
     end
     def auth 
-        usr=Student.find_by(student_no: params[:student_no])
-        admin=Teacher.find_by(teacher_no: params[:teacher_no])
+        usr=Student.find_by(id: params[:id])
+        admin=Teacher.find_by(id: params[:id])
         
         if usr && usr.authenticate(params[:password]) then  
             session[:usr] = usr.id 
-            redirect_to controller: :top,  action: :index ,student_no:  params[:student_no] 
+            redirect_to controller: :top,  action: :index 
 
         else
             if admin && admin.authenticate(params[:password]) then 
