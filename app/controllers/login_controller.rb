@@ -7,7 +7,7 @@ class LoginController < ApplicationController
         render :layout => nil        
     end
     def auth 
-        usr=Student.find_by(id: params[:id])
+        usr=Student.find_by(id: params[:studentid])
         admin=Teacher.find_by(id: params[:id])
         
         if usr && usr.authenticate(params[:password]) then  

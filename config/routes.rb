@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'student_new/new'
+
   get 'mypage/info'
 
   get 'grade/inquiry'
@@ -72,7 +74,9 @@ Rails.application.routes.draw do
   post'grade/datacreate'
   get 'grade/create'
   post 'grade/create'
-  
+
+  get 'student_new/new'
+  post 'student_new/create'
   
   
 end
