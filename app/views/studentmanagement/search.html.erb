@@ -1,0 +1,9 @@
+<%= form_tag({action: :result},id: :ajax_form,remote:true, class: "form-inline") do %>
+  <div class="form-group">
+  <label class="mr-sm-2" for="inlineFormCustomSelect">検索項目</label>
+  <%= select :page, :name, [["学生番号", "rails_base"], ["名前", "ruby_base"],["クラス","3"]] %>
+  <input type="text" class="form-control" id="email" placeholder="メールアドレス">
+  <button type="submit" class="btn btn-primary">検索</button>  
+  </div>
+    
+<% end %>   

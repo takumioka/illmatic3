@@ -1,0 +1,10 @@
+<div id="wrapper" class="toggled">
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand"><%= link_to  yield(:title), mypage_top_path %></li>
+        <li><%= link_to '学生管理', studentmanagement_index_path %></li>
+        <li><%= link_to '成績登録', student_timetable_path %></li>
+        <li><%= link_to "学生連絡登録", student_info_path %></li>
+    </ul>
+</div>

@@ -1,3 +1,5 @@
+<%= provide(:title,session[:name]) %>   
+
 <%= form_for @Student,:url => {:action => :create} do |f| %>    
     <center><div class="field">
       <div class="col-md-3 ">
