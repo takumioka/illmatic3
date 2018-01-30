@@ -75,8 +75,9 @@ Rails.application.routes.draw do
   get 'grade/create'
   post 'grade/create'
 
-  get 'student_new/new'
-  post 'student_new/create'
+  get 'studentmanagement/index'  
+  get 'studentmanagement/new'
+  post 'studentmanagement/create'
   
   
 end
