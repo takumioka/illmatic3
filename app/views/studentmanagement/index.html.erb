@@ -1,0 +1,12 @@
+<%= provide(:title,session[:name]) %>   
+
+<div class="text-center">
+<%= link_to "学生登録", { :controller => :studentmanagement, :action => :new}, { :class => "btn btn-default btn-sm"} %>
+
+</div>
+<div class="text-center">
+<%= link_to "学生検索", { :controller => :studentmanagement, :action => :search}, { :class => "btn btn-default btn-sm"} %>
+</div>
+<div class="text-center">
+<%= link_to "お知らせ登録", { :controller => :studentmanagement, :action => :news}, { :class => "btn btn-default btn-sm"} %>
+</div>

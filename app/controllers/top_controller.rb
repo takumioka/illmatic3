@@ -4,9 +4,10 @@ class TopController < ApplicationController
         session[:name]=data.name
     end
     def adminindex
-        render :layout => 'layouts/adminsidbar' 
         data = Teacher.find(session[:admin] )
-        session[:name]=data.name
+        session[:name]=data.name        
+        render :layout => 'layouts/admin' 
+        
     end 
     def test 
         @id = session[:student_no]

@@ -77,6 +77,11 @@ Rails.application.routes.draw do
 
   get 'studentmanagement/index'  
   get 'studentmanagement/new'
+  get 'studentmanagement/result'
+  get 'studentmanagement/search'
+  
+  get 'studentmanagement/news'
+  
   post 'studentmanagement/create'
   
   
