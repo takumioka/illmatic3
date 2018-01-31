@@ -64,6 +64,7 @@ Rails.application.routes.draw do
   get 'grade/inquiry'
 
   get 'mypage/top'
+  get 'mypage/mypageadmin'
 
   get 'password/edit'
 
@@ -77,8 +78,11 @@ Rails.application.routes.draw do
 
   get 'studentmanagement/index'  
   get 'studentmanagement/new'
-  get 'studentmanagement/result'
+  get 'studentmanagement/result'  
+  post 'studentmanagement/result'
   get 'studentmanagement/search'
+  get 'studentmanagement/search_result'
+  post 'studentmanagement/search_result'
   
   get 'studentmanagement/news'
   

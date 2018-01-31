@@ -1,0 +1,21 @@
+<%= provide(:title,session[:name]) %>   
+<div class="labelstudent label-default">
+  <h2>検索結果</h2>
+</div>
+<table class="table" width="10%" height="100">
+  <thead>
+    <tr>
+      <th>学生番号</th>
+      <th>クラス</th>      
+      <th>名前</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @stundet.each do |te| %>
+    <tr>
+        <td><%= te.id %> </td>
+        <td><%= te.k_class %> </td>
+        <td><%= te.name %> </td>        
+    </tr>
+    <% end %>
+  </tbody>
