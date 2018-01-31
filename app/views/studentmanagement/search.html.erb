@@ -1,10 +1,10 @@
-<%= form_tag({action: :result},id: :ajax_form,remote:true, class: "form-inline") do %>
+  <%=form_tag({ :controller => 'studentmanagement', :action => 'search_result' },
+  {id: :mannaka,class: "form-inline"}) do %>
   <div class="form-group">
   <label class="mr-sm-2" for="inlineFormCustomSelect">検索項目</label>
-  <%= select :page, :name, [["学生番号", "id"], ["名前", "name"],["クラス","k_class"]] %>
-  <input type="text" class="form-control" id="email" placeholder="キーワード">
-  <%= submit_tag("キーワード",class:"btn btn-primary") %>
+  <%= select_tag 'atai', options_for_select([["学生番号","id"], ["名前","name"], ["クラス","k_class"]],:selected=>"1") %>
+  <%= text_field_tag 'keyword', '', placeholder: "キーワード", class: "form-control" %>
+  <%= submit_tag( "検索",class: 'btn btn-primary' ) %> 
   </div>
-<% end %>
-<div id="test">
-</dvi>
+<% end %>   
+<div id="rrrrr"></div>

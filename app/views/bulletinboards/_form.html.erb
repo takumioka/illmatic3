@@ -1,0 +1,27 @@
+<%= form_with(model: bulletinboard, local: true) do |form| %>
+  <% if bulletinboard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bulletinboard.errors.count, "error") %> prohibited this bulletinboard from being saved:</h2>
+
+      <ul>
+      <% bulletinboard.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :messagecontent %>
+    <%= form.text_area :messagecontent, id: :bulletinboard_messagecontent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nickname %>
+    <%= form.text_field :nickname, id: :bulletinboard_nickname %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

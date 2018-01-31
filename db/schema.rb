@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180129032702) do
+ActiveRecord::Schema.define(version: 20180131171505) do
+
+  create_table "bulletinboards", force: :cascade do |t|
+    t.integer "student_id"
+    t.text "messagecontent"
+    t.string "nickname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["student_id"], name: "index_bulletinboards_on_student_id"
+  end
 
   create_table "grades", force: :cascade do |t|
     t.string "grade"

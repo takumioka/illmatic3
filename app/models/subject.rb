@@ -1,3 +1,4 @@
 class Subject < ApplicationRecord
-    has_many :grade 
+    has_many :grade
+    
 end

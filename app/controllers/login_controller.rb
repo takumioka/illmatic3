@@ -1,10 +1,10 @@
 class LoginController < ApplicationController
     skip_before_action :check_logined
     def index 
-        render :layout => nil        
+        render :layout => 'layouts/loginboot'                 
     end
     def teacher 
-        render :layout => nil        
+        render :layout => 'layouts/loginboot'                 
     end
     def auth 
         usr=Student.find_by(id: params[:studentid])

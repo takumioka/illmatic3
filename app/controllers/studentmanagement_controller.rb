@@ -10,11 +10,18 @@ class StudentmanagementController < ApplicationController
         Student.create(person_params)
     end
     def search
-        render :layout => 'layouts/admin'
-    end 
-    def result
-        render :layout => 'layouts/admin'
+        render :layout => 'layouts/admin'        
         
+    end
+    def search_result
+        atai=params[:atai]
+        if atai.eql? 'id' then
+            @stundet=Student.where(id: params[:keyword])            
+        elsif atai.eql? 'name' then
+            @stundet=Student.where(name: params[:keyword])           
+        elsif atai.eql? 'k_class' then
+            @stundet=Student.where(k_class: params[:keyword])            
+        end
     end
       private 
       def person_params

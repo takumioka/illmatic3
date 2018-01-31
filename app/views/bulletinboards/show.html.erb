@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Messagecontent:</strong>
+  <%= @bulletinboard.messagecontent %>
+</p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @bulletinboard.nickname %>
+</p>
+
+<%= link_to 'Edit', edit_bulletinboard_path(@bulletinboard) %> |
+<%= link_to 'Back', bulletinboards_path %>
