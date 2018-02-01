@@ -1,8 +1,7 @@
-<%= form_with(model: bulletinboard, local: true) do |form| %>
+<%= form_for(bulletinboard) do |form| %>
   <% if bulletinboard.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(bulletinboard.errors.count, "error") %> prohibited this bulletinboard from being saved:</h2>
-
       <ul>
       <% bulletinboard.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,18 +9,36 @@
       </ul>
     </div>
   <% end %>
+  <div>
+    <%= form.hidden_field :student_id, value: session[:usr]%> 
+    </div>
+    <div class="col-xs-4">
+      <%= form.label :messagecontent %>
+      <%= form.text_area :messagecontent, id: :bulletinboard_messagecontent,class:'test' %>
+    </div>
 
-  <div class="field">
-    <%= form.label :messagecontent %>
-    <%= form.text_area :messagecontent, id: :bulletinboard_messagecontent %>
-  </div>
-
-  <div class="field">
+  <div class="form-group col-xs-4"">
     <%= form.label :nickname %>
-    <%= form.text_field :nickname, id: :bulletinboard_nickname %>
+    <%= form.text_field :nickname, id: :bulletinboard_nickname ,class:'form-control'%>
   </div>
+  
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+<form>
+<div class="form-group">
+  <label for="inputdefault">デフォルト</label>
+  <input class="form-control" id="inputdefault" type="text">
+</div>
+<div class="form-group">
+  <label for="inputlg">input-lg</label>
+  <input class="form-control input-lg" id="inputlg" type="text">
+</div>
+<div class="form-group">
+  <label for="inputsm">input-sm</label>
+  <input class="form-control input-sm" id="inputsm" type="text">
+</div>
+</form>

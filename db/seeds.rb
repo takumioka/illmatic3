@@ -8,4 +8,5 @@
 
 Grade.create(student_id:1000,subject_id:2,grade:"優")
 
+Bulletinboard.create(student_id:1000,messagecontent:"こんにちは",nickname:"匿名")
 

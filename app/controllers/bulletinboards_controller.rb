@@ -69,6 +69,6 @@ class BulletinboardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bulletinboard_params
-      params.require(:bulletinboard).permit(:messagecontent, :nickname)
+      params.require(:bulletinboard).permit(:student_id,:messagecontent, :nickname)
     end
 end

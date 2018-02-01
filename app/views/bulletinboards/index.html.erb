@@ -1,6 +1,5 @@
-<p id="notice"><%= notice %></p>
+<hr>
 
-<h1>Bulletinboards</h1>
 
 <table>
   <thead>
@@ -16,9 +15,6 @@
       <tr>
         <td><%= bulletinboard.messagecontent %></td>
         <td><%= bulletinboard.nickname %></td>
-        <td><%= link_to 'Show', bulletinboard %></td>
-        <td><%= link_to 'Edit', edit_bulletinboard_path(bulletinboard) %></td>
-        <td><%= link_to 'Destroy', bulletinboard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

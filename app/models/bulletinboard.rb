@@ -1,3 +1,3 @@
 class Bulletinboard < ApplicationRecord
-    belongs_to :student    
+    belongs_to :student, optional: true
 end
