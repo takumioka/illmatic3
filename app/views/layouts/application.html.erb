@@ -4,13 +4,15 @@
     <title>Illmatic</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "application" %>
+    
     
   </head>
 
   <body>
     <%= render template:'layouts/topbar' %>
     <%= render template:'layouts/sidebar' %>
-    <%= yield %>
+    <%= yield %>    
     </div>
   </body>
 </html>

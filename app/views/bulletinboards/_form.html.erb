@@ -11,6 +11,11 @@
   <% end %>
   <div>
     <%= form.hidden_field :student_id, value: session[:usr]%> 
+  </div>
+    <div class="row">
+      <div class="col-xs-2">
+        <%= form.text_field :nickname, id: :bulletinboard_nickname ,class:'form-control',placeholder: 'ニックネーム'%>
+      </div>
     </div>
     <div class="col-xs-4">
       <%= form.label :messagecontent %>
@@ -21,24 +26,11 @@
     <%= form.label :nickname %>
     <%= form.text_field :nickname, id: :bulletinboard_nickname ,class:'form-control'%>
   </div>
-  
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+<textarea class='demo'>高さを調節するtextarea要素</textarea>
 
-<form>
-<div class="form-group">
-  <label for="inputdefault">デフォルト</label>
-  <input class="form-control" id="inputdefault" type="text">
-</div>
-<div class="form-group">
-  <label for="inputlg">input-lg</label>
-  <input class="form-control input-lg" id="inputlg" type="text">
-</div>
-<div class="form-group">
-  <label for="inputsm">input-sm</label>
-  <input class="form-control input-sm" id="inputsm" type="text">
-</div>
-</form>
+

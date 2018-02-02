@@ -61,3 +61,4 @@ gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'jquery-rails'
 
+gem 'autosize-rails'
