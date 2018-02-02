@@ -19,8 +19,3 @@
 //= require_tree .
  //= require jquery.autosize 
 
-
- $(document).ready(function(){
-  $('textarea').autosize();
-});
-  

@@ -9,4 +9,4 @@
 Grade.create(student_id:1000,subject_id:2,grade:"優")
 
 Bulletinboard.create(student_id:1000,messagecontent:"こんにちは",nickname:"匿名")
-
+Student.create(id:1001,assword_digest:"12345",k_class:"R4A1",number:5,name:'あほ')
