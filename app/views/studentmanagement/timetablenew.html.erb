@@ -35,6 +35,13 @@
     <% end %>
   </tbody>
 </table>
+<div id="map_canvas" style="width:500px; height:300px"></div>
+
+<p id="latlng" style="font-size:10px;"></p>
+
+<%= f.hidden_field :lat, :value => :lat %>
+
+<%= f.hidden_field :lng, :value => :lng %>
 
 <input type="submit" value="送信" id="test">
 <textarea name="kanso" rows="4" cols="40" id="txtArea"></textarea><br>
