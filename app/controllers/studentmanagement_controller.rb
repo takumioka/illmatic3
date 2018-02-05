@@ -23,9 +23,26 @@ class StudentmanagementController < ApplicationController
             @stundet=Student.where(k_class: params[:keyword])            
         end
     end
+    def timetablenew
+        excelreading
+    end 
+    def timetablecreate
+        excelreading
+    end 
+
+
       private 
       def person_params
           params.require(:student).permit(:id,:password, :password_confirmation,:k_class,:number,:name)
+      end
+
+      private 
+      def excelreading #読み込み
+        # Excelファイルを読み込む
+        excel = Spreadsheet.open('./timetable.xls', 'r')
+        sheet = excel.worksheet(0)
+        @timetable=sheet    
+        
       end 
-    
+        
 end

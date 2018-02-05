@@ -1,0 +1,40 @@
+
+<h1>KCS北九州情報専門学校</h1>
+<div class="labelstudent label-default">時間割</div>
+<table class="table" width="100%" height="100" id="edit-table">
+  <thead>
+    <tr>
+  <% counti=0%>
+    <% @timetable.rows.each  do |i|  %>
+      <% countj=0 %>
+      <% if counti > 1 %>
+        <tr>
+      <% end %>
+
+      <% i.each  do |te|  %>
+        <% if counti == 0 %>
+          <th><%= te.to_s %> </th>
+        <% elsif countj == 0 %>
+          <th> <%= te %> </th>
+        <% else %>
+          <td> <%= te %> </td>
+        <% end %>
+        <% countj=countj+1%>
+      <% end %>
+      <% counti=counti+1%>
+      <% if counti == 1 %>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        <tr>
+    
+      <% else %>
+        </tr>
+      <% end %>
+
+    <% end %>
+  </tbody>
+</table>
+
+<input type="submit" value="送信" id="test">
+<textarea name="kanso" rows="4" cols="40" id="txtArea"></textarea><br>

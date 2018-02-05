@@ -18,4 +18,6 @@
 //= require turbolinks
 //= require_tree .
  //= require jquery.autosize 
+ //= require_directory .
+
 
