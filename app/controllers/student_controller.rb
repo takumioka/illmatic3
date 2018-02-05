@@ -14,10 +14,23 @@ class StudentController < ApplicationController
     obj.update(student_params)
     redirect_to '/student/list'
   end
+  def timetable
+    excelreading
+  end 
+    
+
 
   private
   def student_params
     params.require(:student).permit(:student_no, :password_digest, :k_class, :number, :name)
   end
+  private 
+  def excelreading #読み込み
+    # Excelファイルを読み込む
+    excel = Spreadsheet.open('./timetable.xls', 'r')
+    sheet = excel.worksheet(0)
+    @timetable=sheet.rows    
+    
+  end 
 
 end

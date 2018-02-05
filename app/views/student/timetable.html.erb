@@ -1,5 +1,12 @@
+<%= @timetable[0] %>
+  
 <h1>KCS北九州情報専門学校</h1>
+<% @timetable.length.times do |i|  %>
+  <% kiyouka=@timetable[i].slice(1, 5) %>
+  <%= kiyouka %>
+<% end %>
 <p><h2><div class="labelstudent label-default">時間割</div></h2></p>
+
 <table class="table" width="100%" height="100">
   <thead>
     <tr>
@@ -12,14 +19,6 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th></th>
-      <td>１</td>
-      <td>２</td>
-      <td>３</td>
-      <td>４</td>
-      <td>５</td>
-    </tr>
     <tr>
       <th>１時限目</th>
       <td>セキュリティ</td>

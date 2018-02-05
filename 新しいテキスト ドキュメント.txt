@@ -19,3 +19,6 @@ rails g model grade  student:integer subjects:integer grade:string
 
 rails generate scaffold bulletinboard messagecontent:text nickname:string
 s
+
+
+学生登録フォームで姓と名を分ける
