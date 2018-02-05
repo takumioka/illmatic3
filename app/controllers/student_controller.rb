@@ -29,7 +29,7 @@ class StudentController < ApplicationController
     # Excelファイルを読み込む
     excel = Spreadsheet.open('./timetable.xls', 'r')
     sheet = excel.worksheet(0)
-    @timetable=sheet.rows    
+    @timetable=sheet    
     
   end 
 
