@@ -1,17 +1,10 @@
-<%= form_for @tests,:url => {:action => :create} do |f| %>
-    <div class="field">
-        <%= f.label :students_id, "学生番号" %><br>
-        <%= f.text_field :students_id %> <br>
-    </div>
-    <div class="field">
-        <%= f.label :subjects_id, "教科id" %><br>
-        <%= f.text_field :subjects_id %> <br>
-　   </div>
-    <div class="field">
-        <%= f.label :grade, "評価" %><br>
-        <%= f.text_field :grade %> <br>
-　   </div>
-    <div class="actions" >
-        <%= f.submit %>
-    </div>
-<% end %>
+<%=form_tag({ :controller => 'studentmanagement', :action => 'search_result' },
+{id: :mannaka,class: "form-inline"}) do %>
+<div class="form-group">
+<%= select_tag 'atai', options_for_select([["学生番号","id"], ["名前","name"],],:selected=>"1") %>
+<%= text_field_tag 'keyword', '', placeholder: "キーワード", class: "form-control" %>
+<%= text_field_tag '', '', placeholder: "評価", class: "form-control" %>
+<%= submit_tag( "登録",class: 'btn btn-primary' ) %> 
+</div>
+<% end %> 
+

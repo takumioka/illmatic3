@@ -5,7 +5,7 @@ class GradeController < ApplicationController
         
   end
   def datacreate
-    @tests=Grade.new
+    @grade=Grade.new
   end 
   def create 
     @grade=Grade.create(person)

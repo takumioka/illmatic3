@@ -1,15 +1,11 @@
-<div class="container">
+
 <%= form_for(bulletinboard) do |form| %>
-  <div class="radio-inline">
     <%= form.text_field :nickname, id: :bulletinboard_nickname ,placeholder: 'ニックネーム',size:'10' %>  
     <%= form.text_area :messagecontent, id: :bulletinboard_messagecontent,cols:'20',row:'1' %>
-  </div>  
-  <div>
+^  <div>
     <%= form.hidden_field :student_id, value: session[:usr]%> 
   </div>
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
-
-</div>

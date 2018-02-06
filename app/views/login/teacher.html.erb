@@ -1,7 +1,20 @@
-<%= form_tag  action: :auth do %>
-    <%= label_tag :id, "学教師番号" %><br>
-    <%= text_field_tag :id %> <br>
-    <%= label_tag :password , "パスワード" %><br>
-    <%= password_field_tag :password %>
-    <%= submit_tag 'ログイン' %>
-<% end %>
+<div class = "container">
+<div class="wrapper">
+        <h3 class="form-signin-heading">Sign In</h3>
+          <hr class="colorgraph"><br>
+            <%=form_tag({ :controller => 'login', :action => 'auth' },{id: :Login_Form,class: "form-signin"}) do %>
+                <%= label_tag :id, "講師番号" %>
+                <%= text_field :id,'', class:'page_name',placeholder:'講師番号',required:"",autofocus:"" %> 
+                <br>
+                <%= label_tag :password , "パスワード" %>
+                <%= password_field_tag :password,'', class:'page_name',placeholder:'パスワード',required:"",autofocus:"" %>
+                <br>
+                <%= submit_tag( "ログイン",class: 'btn btn-primary' ) %>                 
+            <% end %>
+            <div class="linktag">
+                <%= link_to "教師側のログインはこちら", :controller => "login", :action => "index" ,class: ""%>
+            </div>         
+            <hr class="colorgraph"><br>
+    </form>			
+</div>
+</div>
