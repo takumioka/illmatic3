@@ -1,3 +1,5 @@
+<%= provide(:title,session[:name]) %>   
+
 <%=form_tag({ :controller => 'studentmanagement', :action => 'search_result' },
 {id: :mannaka,class: "form-inline"}) do %>
 <div class="form-group">
@@ -6,5 +8,5 @@
 <%= text_field_tag '', '', placeholder: "評価", class: "form-control" %>
 <%= submit_tag( "登録",class: 'btn btn-primary' ) %> 
 </div>
-<% end %> 
+<% end %>   
 

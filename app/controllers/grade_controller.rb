@@ -5,6 +5,8 @@ class GradeController < ApplicationController
         
   end
   def datacreate
+    render :layout => 'layouts/admin'                 
+    
     @grade=Grade.new
   end 
   def create 
