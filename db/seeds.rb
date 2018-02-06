@@ -5,8 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movievcs.first)
+require "csv"
 
-Grade.create(student_id:1000,subject_id:2,grade:"優")
+CSV.foreach('db/student_test.csv') do |s|
+  Student.create(:id => s[0], :password_digest => BCrypt::Password.create(s[1]), :k_class => s[2], :number => s[3], :name => s[4])
+end
 
-Bulletinboard.create(student_id:1000,messagecontent:"こんにちは",nickname:"匿名")
-Student.create(id:1001,assword_digest:"12345",k_class:"R4A1",number:5,name:'あほ')
+CSV.foreach('db/teacher_test.csv') do |t|
+    Teacher.create(:id => t[0], :password_digest => BCrypt::Password.create(t[1]), :k_class => t[2], :name => t[3])
+end
+
+CSV.foreach('db/subject_test.csv') do |s|
+    Subject.create(:subject_name => s[0])
+end
+
+CSV.foreach('db/grade_test.csv') do |g|
+    Grade.create(:grade => g[0], :student_id => g[1], :subject_id => g[2])
+end
+
+CSV.foreach('db/bulletinboards_test.csv') do |b|
+    Bulletinboard.create(:student_id => b[0], :messagecontent => b[1], :nickname => b[2])
+end
