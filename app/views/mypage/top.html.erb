@@ -3,8 +3,3 @@
 <%= link_to 'パスワード', password_edit_path %><br>
 <%= link_to 'ログアウト' , {controller: :login, action: :logout}  %>
 
-<form action="cgi-bin/formmail.cgi" method="post">
-ご感想：<br>
-<textarea name="kanso" rows="4" cols="40">ここに感想を記入してください。</textarea><br>
-<input type="submit" value="送信"><input type="reset" value="リセット">
-</form>
