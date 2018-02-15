@@ -13,6 +13,9 @@ class StudentmanagementController < ApplicationController
         render :layout => 'layouts/admin'        
         
     end
+    def infonew
+        render :layout => 'layouts/admin'                         
+    end
     def search_result
         atai=params[:atai]
         if atai.eql? 'id' then
@@ -39,7 +42,7 @@ class StudentmanagementController < ApplicationController
       private 
       def excelreading #読み込み
         # Excelファイルを読み込む
-        excel = Spreadsheet.open('./timetable.xls', 'r')
+        excel = Spreadsheet.open('db/timetable.xls', 'r')
         sheet = excel.worksheet(0)
         @timetable=sheet    
         

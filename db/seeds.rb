@@ -22,7 +22,3 @@ end
 CSV.foreach('db/grade_test.csv') do |g|
     Grade.create(:grade => g[0], :student_id => g[1], :subject_id => g[2])
 end
-
-CSV.foreach('db/bulletinboards_test.csv') do |b|
-    Bulletinboard.create(:student_id => b[0], :messagecontent => b[1], :nickname => b[2])
-end

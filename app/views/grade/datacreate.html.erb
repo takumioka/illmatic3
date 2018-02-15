@@ -3,8 +3,8 @@
 <%=form_tag({ :controller => 'studentmanagement', :action => 'search_result' },
 {id: :mannaka,class: "form-inline"}) do %>
 <div class="form-group">
-<%= select_tag 'atai', options_for_select([["学生番号","id"], ["名前","name"],],:selected=>"1") %>
-<%= text_field_tag 'keyword', '', placeholder: "キーワード", class: "form-control" %>
+<%= text_field_tag 'keyword', '', placeholder: "学生番号", class: "form-control" %>
+<%= text_field_tag 'keyword', '', placeholder: "科目名", class: "form-control" %>
 <%= text_field_tag '', '', placeholder: "評価", class: "form-control" %>
 <%= submit_tag( "登録",class: 'btn btn-primary' ) %> 
 </div>

@@ -27,7 +27,7 @@ class StudentController < ApplicationController
   private 
   def excelreading #読み込み
     # Excelファイルを読み込む
-    excel = Spreadsheet.open('./timetable.xls', 'r')
+    excel = Spreadsheet.open('db/timetable.xls', 'r')
     sheet = excel.worksheet(0)
     @timetable=sheet    
     

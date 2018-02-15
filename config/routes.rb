@@ -84,6 +84,7 @@ Rails.application.routes.draw do
   get 'studentmanagement/search'
   get 'studentmanagement/search_result'
   post 'studentmanagement/search_result'
+  get 'studentmanagement/infonew'
   
   get 'studentmanagement/news'
   get 'studentmanagement/timetablenew'
